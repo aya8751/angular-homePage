@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap');
+
+:root{
+  --orange-color:#DA722C;
+  --light-color:#E8F7FB;
+  --black-blue-color:#023047;
+  --light-blue-color:#6F7DFB;
+  --black-color:#070917;
+}
+* ,
+::after ,
+::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Poppins",sans-serif;
+}
+/* container style start */
+.wapper{
+  max-width: 1339px;
+  margin: 0 auto;
+}
+/* container style end */
+/* button style start */
+.btn{
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  font-size: 16px;
+}
+.btn.dark{
+  background-color: var(--black-blue-color);
+}
+.btn.light{
+  background-color: var(--orange-color);
+}
+/* button style end */
+section{
+  margin-top: 100px;
+}
+h2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  color: var(--black-blue-color);
+}
+h2.light{
+  color: white;
+}
+@media(max-width: 1100px){
+  .btn{
+    padding: 12px 32px;
+  }
+  .wapper{
+    padding: 0 80px;
+  }
+  h2{
+    font-size: 40px;
+  }
+}
+@media(max-width: 700px){
+  .wapper{
+    padding: 0 32px;
+  }
+  h2{
+    font-size: 30px;
+  }
+}

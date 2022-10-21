@@ -1,0 +1,119 @@
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  /* width: 1134px; */
+  width: 1339px;
+  /* width: 100%; */
+  top: 36px;
+  z-index: 100;
+  transition: all 500ms ease;
+}
+/* class add when btn scroll */
+nav.scrolled{
+  background: var( --light-blue-color);
+    box-shadow: 0 9px 21px -5px rgba(0, 0, 0, .3);
+  border-radius:0 0 24px 24px;
+  top: 0;
+  padding: 12px;
+}
+nav .logo{
+  font-family: 'Raleway',sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  color: #FFFFFF;
+}
+nav .menu-items{
+  display: flex;
+  list-style: none;
+  gap: 60px;
+  align-items: center;
+}
+nav .menu-items .item a{
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+nav.mobile-nav,
+.mobile-new-container{
+  display: none;
+}
+
+@media(max-width: 1100px){
+  nav{
+    width: 100vw;
+    left: 0;
+    right: 0;
+    padding: 36px 80px;
+  }
+  nav.scrolled{
+    padding: 16px 80px;
+  }
+}
+@media(max-width: 800px){
+  nav{
+    display: none;
+  }
+  nav.mobile-nav{
+    display: flex;
+  }
+  nav.mobile-nav.scrolled{
+    padding: 8px 100px;
+    background: var( --light-blue-color);
+    box-shadow: 0 9px 21px -5px rgba(0, 0, 0, .3);
+  }
+  .mobile-new-container{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background: var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 400ms ease;
+  }
+  .mobile-new-container.active{
+    left: 0;
+  }
+  .mobile-new-container .close-icon{
+    position: fixed;
+    top: 32px;
+    right: 80px;
+    opacity: 0;
+    transition: all 400ms ease;
+  }
+  .mobile-new-container.active .close-icon{
+    opacity: 1;
+  }
+  .mobile-new-container .menu-items{
+    list-style: none;
+    padding: 0;
+  }
+  .mobile-new-container .menu-items .item{
+    margin: 30px 0;
+    text-align: center;
+  }
+  .mobile-new-container .menu-items .item a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+@media(max-width: 700px){
+  nav.mobile-nav{
+    padding:  0 32px;
+  }
+  /* in mobileNav when scroll */
+  nav.mobile-nav.scrolled{
+    padding: 8px 32px;
+  }
+  .mobile-new-container .close-icon{
+    top: 12px;
+    right: 13px;
+  }
+}

@@ -1,0 +1,48 @@
+<!-- main navbar start -->
+<nav [class.scrolled]="headerChange">
+  <div class="logo">GD.</div>
+  <ul class="menu-items">
+    <li class="item">
+      <a href="#">About</a>
+    </li>
+    <li class="item">
+      <a href="#">Services</a>
+    </li>
+    <li class="item">
+      <a href="#">Our Services</a>
+    </li>
+    <li>
+      <a href="#" class="btn dark">Enrol Now</a>
+    </li>
+  </ul>
+</nav>
+<!-- main navbar end -->
+
+<!-- mobile navbar start -->
+<nav class="mobile-nav" [class.scrolled]="headerChange">
+  <div class="logo">GD.</div>
+  <div class="menu-icon" (click)="viewMenu()">
+    <img src="../../../assets/images/Menu.svg" alt="menuIcon">
+  </div>
+</nav>
+<!-- when add active class -->
+<div class="mobile-new-container" [class.active]="toggleMenu">
+  <div class="close-icon" (click)="hideMenu()">
+    <img src="../../../assets/images/x-menu.svg" alt="closeMenu">
+  </div>
+  <ul class="menu-items">
+    <li class="item">
+      <a href="#">About</a>
+    </li>
+    <li class="item">
+      <a href="#">Services</a>
+    </li>
+    <li class="item">
+      <a href="#">Our Services</a>
+    </li>
+    <li>
+      <a href="#" class="btn dark">Enrol Now</a>
+    </li>
+  </ul>
+</div>
+<!-- mobile navbar end -->

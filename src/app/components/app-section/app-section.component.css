@@ -1,0 +1,39 @@
+/* appSection style start  */
+.app-sec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.app-sec p{
+  margin: 5px 0 27px 0;
+  text-align: center;
+}
+/* app-buttons style start  */
+.app-sec .app-buttons{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+.app-sec .app-buttons .app-btn{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 31px;
+  background: var(--black-color);
+  width: 310px;
+}
+.app-sec .app-buttons .app-btn img{
+  width: 55.71px;
+  height: 60px;
+}
+.app-sec .app-buttons .app-btn span{
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+@media(max-width: 700px){
+  .app-sec .app-buttons{
+    flex-direction: column;
+  }
+}
